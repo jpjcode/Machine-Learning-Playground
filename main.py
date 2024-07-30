@@ -9,7 +9,7 @@ from LNN import LiquidStateMachine
 #creates the model
 model = LiquidStateMachine(1, 1, [8])
 
-#gets optimizer an criterion(mean the cost function)
+#gets optimizer and criterion(the cost function)
 opt = optim.SGD(model.parameters(), lr=0.01)
 criterion = nn.MSELoss()
 
