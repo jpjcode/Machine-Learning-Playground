@@ -15,3 +15,5 @@ class LIFCell(nn.Module):
         self.v = self.v + (self.dt/self.tau_m) * (self.v_rest - self.v + self.R_m * input)
         torch.where((self.v >= self.v_th), self.v_reset, self.v)
         return self.v
+    def eval(self):
+        return self.v
